@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interesting Facts-->
+        <scene sceneID="v67-Sd-Chy">
+            <objects>
+                <navigationController storyboardIdentifier="InterestingFactsNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bql-V3-APc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Interesting Facts" image="idea" id="x6S-Mp-e8y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H4g-Fa-JLD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6PN-QT-qiZ" kind="relationship" relationship="rootViewController" id="2as-I0-rE8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z47-hv-CwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1441" y="-123"/>
+        </scene>
+        <!--Interesting Facts-->
+        <scene sceneID="p9Z-v5-nzz">
+            <objects>
+                <viewController storyboardIdentifier="InterestingFactsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6PN-QT-qiZ" customClass="InterestingFactsViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i98-Um-lno">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ihE-gn-2tj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InterestingFact" rowHeight="97" id="Kbu-ne-78A" customClass="InterestingFactCell" customModule="TestApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kbu-ne-78A" id="sku-et-Z9n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wG-QR-p4x">
+                                                    <rect key="frame" x="16" y="8" width="343" height="81"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facts" translatesAutoresizingMaskIntoConstraints="NO" id="yFx-1M-ip2">
+                                                            <rect key="frame" x="8" y="13" width="75" height="55"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="55" id="2Ce-VP-I7T"/>
+                                                                <constraint firstAttribute="width" constant="75" id="QkW-bk-D7x"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's estimated that Sweden has more islands than any other country." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-6o-hiu">
+                                                            <rect key="frame" x="91" y="16" width="244" height="49"/>
+                                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="yFx-1M-ip2" firstAttribute="leading" secondItem="6wG-QR-p4x" secondAttribute="leading" constant="8" id="Hgj-TR-5ZC"/>
+                                                        <constraint firstItem="sKA-6o-hiu" firstAttribute="leading" secondItem="yFx-1M-ip2" secondAttribute="trailing" constant="8" id="QIn-Xk-VIb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sKA-6o-hiu" secondAttribute="trailing" constant="8" id="TkQ-zy-WWR"/>
+                                                        <constraint firstItem="yFx-1M-ip2" firstAttribute="centerY" secondItem="6wG-QR-p4x" secondAttribute="centerY" id="ddR-Xc-ggK"/>
+                                                        <constraint firstItem="sKA-6o-hiu" firstAttribute="top" secondItem="6wG-QR-p4x" secondAttribute="top" constant="16" id="nGi-yY-IdY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="sKA-6o-hiu" secondAttribute="bottom" constant="16" id="xmh-wf-NVF"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6wG-QR-p4x" firstAttribute="leading" secondItem="sku-et-Z9n" secondAttribute="leading" constant="16" id="Rm5-Vx-uhM"/>
+                                                <constraint firstAttribute="bottom" secondItem="6wG-QR-p4x" secondAttribute="bottom" constant="8" id="UG6-3f-UIE"/>
+                                                <constraint firstItem="6wG-QR-p4x" firstAttribute="top" secondItem="sku-et-Z9n" secondAttribute="top" constant="8" id="Xuf-3K-FDj"/>
+                                                <constraint firstAttribute="trailing" secondItem="6wG-QR-p4x" secondAttribute="trailing" constant="16" id="yXs-VL-Pqg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="factDetail" destination="sKA-6o-hiu" id="Zdg-Ti-a0s"/>
+                                            <outlet property="factImageView" destination="yFx-1M-ip2" id="aTM-DI-Imv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6PN-QT-qiZ" id="ljL-Zd-cMn"/>
+                                    <outlet property="delegate" destination="6PN-QT-qiZ" id="mYN-Kc-2HX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GHr-1k-Ux8" firstAttribute="bottom" secondItem="ihE-gn-2tj" secondAttribute="bottom" id="09Z-vY-f5O"/>
+                            <constraint firstItem="GHr-1k-Ux8" firstAttribute="trailing" secondItem="ihE-gn-2tj" secondAttribute="trailing" id="6Ux-hT-a2y"/>
+                            <constraint firstItem="ihE-gn-2tj" firstAttribute="top" secondItem="GHr-1k-Ux8" secondAttribute="top" id="F7M-Wo-6N1"/>
+                            <constraint firstItem="ihE-gn-2tj" firstAttribute="leading" secondItem="GHr-1k-Ux8" secondAttribute="leading" id="jmC-e1-1GB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GHr-1k-Ux8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Interesting Facts" id="ZX7-Jn-tRk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ihE-gn-2tj" id="AHW-bS-iHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wll-4w-k3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="-122"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facts" width="1030" height="685"/>
+        <image name="idea" width="16" height="16"/>
+    </resources>
+</document>

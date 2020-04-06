@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Funny Image-->
+        <scene sceneID="ZKr-sA-5iL">
+            <objects>
+                <navigationController storyboardIdentifier="FunnyImagesNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xA4-Rv-kDW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Funny Image" image="glasses" selectedImage="glasses" id="2RN-bR-OYm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jKv-Qj-77O">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jTQ-tR-g0h" kind="relationship" relationship="rootViewController" id="6eR-Pl-ZDq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zz7-Q2-lFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="33"/>
+        </scene>
+        <!--Funny Images-->
+        <scene sceneID="Vk2-Oj-fVg">
+            <objects>
+                <viewController storyboardIdentifier="FunnyImagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTQ-tR-g0h" customClass="FunnyImagesViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sir-4s-8wa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vqq-xS-bFj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FunnyImage" rowHeight="386" id="Cqi-r4-NfZ" customClass="FunnyImageCell" customModule="TestApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="386"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cqi-r4-NfZ" id="N1A-Ei-uNB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="386"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="tom&amp;jerry" translatesAutoresizingMaskIntoConstraints="NO" id="71Z-F5-0hu">
+                                                    <rect key="frame" x="15" y="11" width="345" height="320"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="320" id="P8y-r1-jet"/>
+                                                        <constraint firstAttribute="width" constant="345" id="dAi-6Z-9dM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tom trying to catch Jerry" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvK-Cn-zl0">
+                                                    <rect key="frame" x="0.0" y="339" width="375" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    </variation>
+                                                    <variation key="heightClass=compact-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tvK-Cn-zl0" firstAttribute="top" secondItem="71Z-F5-0hu" secondAttribute="bottom" constant="8" id="3gI-Wq-1Tv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="71Z-F5-0hu" secondAttribute="trailing" id="Iw4-98-iqb"/>
+                                                <constraint firstItem="tvK-Cn-zl0" firstAttribute="leading" secondItem="N1A-Ei-uNB" secondAttribute="leading" id="Mah-be-aDP"/>
+                                                <constraint firstAttribute="bottom" secondItem="tvK-Cn-zl0" secondAttribute="bottom" constant="16" id="VWS-H3-7d1"/>
+                                                <constraint firstItem="71Z-F5-0hu" firstAttribute="leading" secondItem="N1A-Ei-uNB" secondAttribute="leadingMargin" id="Yec-8P-NXX"/>
+                                                <constraint firstItem="71Z-F5-0hu" firstAttribute="top" secondItem="N1A-Ei-uNB" secondAttribute="topMargin" id="pzD-gC-r15"/>
+                                                <constraint firstAttribute="trailing" secondItem="tvK-Cn-zl0" secondAttribute="trailing" id="ycO-qH-lFv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="funnyImage" destination="71Z-F5-0hu" id="E2G-lB-kJ2"/>
+                                            <outlet property="imageTitle" destination="tvK-Cn-zl0" id="IT8-T6-M9T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jTQ-tR-g0h" id="PMP-d9-zCq"/>
+                                    <outlet property="delegate" destination="jTQ-tR-g0h" id="dKN-7P-QBj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TR5-jm-6j8" firstAttribute="bottom" secondItem="vqq-xS-bFj" secondAttribute="bottom" id="Rqw-Zd-lZU"/>
+                            <constraint firstItem="TR5-jm-6j8" firstAttribute="trailing" secondItem="vqq-xS-bFj" secondAttribute="trailing" id="h5P-SZ-j9L"/>
+                            <constraint firstItem="vqq-xS-bFj" firstAttribute="leading" secondItem="TR5-jm-6j8" secondAttribute="leading" id="j5s-1E-dWh"/>
+                            <constraint firstItem="vqq-xS-bFj" firstAttribute="top" secondItem="TR5-jm-6j8" secondAttribute="top" id="xiu-lG-wp3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TR5-jm-6j8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Funny Images" id="ZH7-Od-aLm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="vqq-xS-bFj" id="7La-lf-eil"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTQ-3A-eX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="glasses" width="16" height="16"/>
+        <image name="tom&amp;jerry" width="512" height="384"/>
+    </resources>
+</document>
